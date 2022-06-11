@@ -1,0 +1,9 @@
+Sex;Age;Adult body mass index;Total
+Men;From 18 to 24 years old;Underweight (BMI < 18.5 kg/m2);53.2
+Men;From 18 to 24 years old;Normal weight (18.5 kg/m2 <= BMI < 25 kg/m2);1,123.8
+Men;From 18 to 24 years old;Overweight (25 kg/m2 <= BMI < 30 kg/m2);380.6
+Men;From 18 to 24 years old;Obesity (BMI >= 30 kg/m2);74.6
+Men;From 25 to 34 years old;Underweight (BMI < 18.5 kg/m2);31.9
+Men;From 25 to 34 years old;Normal weight (18.5 kg/m2 <= BMI < 25 kg/m2);1,408.3
+Men;From 25 to 34 years old;Overweight (25 kg/m2 <= BMI < 30 kg/m2);929.5
+Men;From 25 to 34 years old;Obesity (BMI >= 30 kg/m2);248.0
