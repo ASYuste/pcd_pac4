@@ -4,6 +4,8 @@ Autor: Albert Salvador
 
 Última modificació: 11/06/2022
 
+També disponible a: https://github.com/ASYuste/pcd_pac4
+
 ## Context
 
 Treballeu per a una empresa que crea solucions “Data Science” per a projectes de tot tipus. L'equip directiu vol centrar-se en els propers anys en el món dels e-sports, de ràpid creixement, i ha decidit començar amb un que no els resultat una mica més conegut, el FIFA.

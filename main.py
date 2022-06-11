@@ -3,7 +3,7 @@ Exercicis amb resultats de la PAC4 de Programació per a la ciència de dades
 Curs 2021/22
 
 Autor: Albert Salvador Yuste
-última modificació: 2022/06/11
+última modificació: 2022/06/10
 """
 # !/usr/bin/ python
 # -*- coding: utf-8 -*-
@@ -416,6 +416,10 @@ def create_teams(cm_df: pd.DataFrame, rb_df: pd.DataFrame,
     # Degut a que un jugador pot estar en més d'un grup, és possible que hi hagi
     # combinacions repetides. Ens quedem només amb una d'elles:
     equips = equips.drop_duplicates(keep='first')
+    # Tot i així pot ser que un jugador estigui en més d'una columna alhora. Tractem-ho:
+    # (basat en https://stackoverflow.com/a/43951580)
+    equips = equips.query("(cm_1 != cm_2) & (cm_1 != rb) & (cm_1 != lb) & "
+                          "(cm_2 != rb) & (cm_2 != lb) & (rb != lb)").copy()
     # Les columnes amb puntuacions que volem observar
     puntuacions = ['puntuacio', 'atac_dreta', 'atac_centre', 'atac_esquerra',
                    'possessio', 'defensa_dreta', 'defensa_centre', 'defensa_esquerra']
@@ -587,7 +591,7 @@ if __name__ == "__main__":
     # INE
     # Un cop realitzada la consulta, n'extreiem els valors d'interès:
 
-    INE = pd.read_csv(os.path.join("data","01001bsc.csv"), sep=";", thousands=",")
+    INE = pd.read_csv(os.path.join("data", "01001bsc.csv"), sep=";", thousands=",")
 
     INE_GROUP = INE.groupby('Adult body mass index')['Total'].sum().reset_index()
     INE_GROUP['group'] = INE_GROUP['Adult body mass index'].str.split("(").str[0].str[:-1]
